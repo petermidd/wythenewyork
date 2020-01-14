@@ -65,20 +65,18 @@ table {
   background-size: cover;
   background-image: url(../img/wythe-slow-west.jpg);
   position: fixed;
+  top: 0;
 }
 
 .container {
-  padding-left: auto;
-  padding-right: auto;
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   width: 100%;
 }
 
 header {
+  display: block;
   width: 135px;
-  position: fixed;
+  position: relative;
   margin: 32px auto;
   z-index: 100;
 }
@@ -87,53 +85,54 @@ header img {
 }
 @media only screen and (max-width: 520px) {
   header {
-    padding-left: auto;
-    padding-right: auto;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 3vh;
-    padding-left: 1em;
-    width: 130px;
+    width: 135px;
   }
 }
 
 .content {
-  position: fixed;
-  margin: 0 auto;
-  top: 50%;
-  color: #f1f1f1;
-  width: 100%;
-  z-index: 100;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 32px;
-}
-.content h1 {
+  display: block;
   position: relative;
-  text-align: center;
-  margin: 0 auto;
+  margin: 260px auto 0;
+  color: #f1f1f1;
+  width: 320px;
+  z-index: 100;
+}
+.content img{
   width: 100%;
-  line-height: 1.25;
+}
+@media only screen and (max-width: 520px) {
+  .content {
+    width: 280px;
+  }
 }
 
 .social {
-  float: right;
-  margin-top: 8vh;
-  margin-right: 5vh;
-  position: relative;
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
   z-index: 100;
 }
-.social li {
-  float: left;
-  padding-right: 1em;
-  padding-left: 1.5em;
-}
 .social img {
-  height: 1em;
+  display: block;
+  margin: 0 auto;
+  height: 32px;
+  width: 32px;
 }
+
+.social a {
+  padding: 1em;
+  opacity: 1;
+  -webkit-transition: opacity 2s ease-out;
+  -moz-transition: opacity 2s ease-out;
+  -o-transition: opacity 2s ease-out;
+  transition: opacity 2s ease-out;
+}
+
 .social a:hover {
   text-decoration: none;
-  border-bottom: solid 1px #FFF;
+  opacity: .72;
 }
+
 @media only screen and (max-width: 520px) {
   .social {
     margin-top: 4vh;
