@@ -1,0 +1,169 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#bg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url(../img/wythe-slow-west.jpg);
+  position: fixed;
+}
+
+.container {
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+}
+
+header {
+  width: 135px;
+  position: fixed;
+  margin: 32px auto;
+  z-index: 100;
+}
+header img {
+  width: 100%;
+}
+@media only screen and (max-width: 520px) {
+  header {
+    padding-left: auto;
+    padding-right: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3vh;
+    padding-left: 1em;
+    width: 130px;
+  }
+}
+
+.content {
+  position: fixed;
+  margin: 0 auto;
+  top: 50%;
+  color: #f1f1f1;
+  width: 100%;
+  z-index: 100;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 32px;
+}
+.content h1 {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  line-height: 1.25;
+}
+
+.social {
+  float: right;
+  margin-top: 8vh;
+  margin-right: 5vh;
+  position: relative;
+  z-index: 100;
+}
+.social li {
+  float: left;
+  padding-right: 1em;
+  padding-left: 1.5em;
+}
+.social img {
+  height: 1em;
+}
+.social a:hover {
+  text-decoration: none;
+  border-bottom: solid 1px #FFF;
+}
+@media only screen and (max-width: 520px) {
+  .social {
+    margin-top: 4vh;
+    margin-right: 1vh;
+  }
+  .social li {
+    float: left;
+    padding-right: 0.5em;
+    padding-left: 1em;
+  }
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+/*# sourceMappingURL=styles.css.map */

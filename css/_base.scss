@@ -1,0 +1,163 @@
+*{
+  box-sizing: border-box;
+}
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: inherit;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+
+.container {
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  float: left;
+  padding-left: 3em;
+  width: 256px;
+  position: relative;
+  margin-top: 5vh;
+  margin-right: 5vh;
+  z-index: 100;
+
+  img {
+    width: 100%;
+  }
+
+  @media only screen and
+  (max-width:520px) {
+    padding-left: auto;
+    padding-right: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3vh;
+    padding-left: 1em;
+    width: 130px;
+  }
+
+}
+
+.content {
+  position: fixed;
+  margin: 0 auto;
+  top:50%;
+  color: #f1f1f1;
+  width: 100%;
+  z-index: 100;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 32px;
+
+  h1{
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    line-height: 1.25;
+  }
+
+  .listen-now{
+    display: block;
+    width: 180px;
+    border-radius: 100px;
+    background-color: #fff;
+    color: #555555;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 20px 25px;
+    margin: 20px auto;
+    text-align: center;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    -ms-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+  }
+
+
+}
+
+.social {
+  float: right;
+  margin-top: 8vh;
+  margin-right: 5vh;
+  position: relative;
+  z-index: 100;
+
+  li {
+    float: left;
+    padding-right: 1em;
+    padding-left: 1.5em;
+  }
+
+  img {
+    height: 1em;
+  }
+
+  a:hover {
+    text-decoration: none;
+    border-bottom: solid 1px #FFF;
+  }
+
+  @media only screen and
+  (max-width:520px) {
+    margin-top: 4vh;
+    margin-right: 1vh;
+
+    li {
+      float: left;
+      padding-right: 0.5em;
+      padding-left: 1em;
+    }
+
+  }
+
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
